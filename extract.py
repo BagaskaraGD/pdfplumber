@@ -1,7 +1,7 @@
 import pdfplumber
 import pandas as pd
-import re
 import os
+import re
 
 def ekstrak_teks_dari_pdf(pdf_path):
     """
@@ -122,9 +122,9 @@ def main():
     """
     Fungsi utama untuk menjalankan seluruh proses.
     """
-    folder_path = "list_CV" # Nama folder tempat Anda menyimpan CV
+    folder_path = "cv" # Nama folder tempat Anda menyimpan CV
     file_excel_output = "hasil_ekstraksi_cv.xlsx"
-    if file_excel_output.exists():
+    if os.path.exists(file_excel_output):
         os.remove(file_excel_output)
     
     # Daftar untuk menampung semua data dari semua CV
